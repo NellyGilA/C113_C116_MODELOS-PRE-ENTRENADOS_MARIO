@@ -29,8 +29,8 @@ function modelLoaded() {
 function gotPoses(results){
  if(results.length > 0){
   console.log(results);
-  noseX = results[0].pose.nose.x-25;
-  noseY = results[0].pose.nose.y+100;
+  noseX = results[0].pose.nose.x-30;
+  noseY = results[0].pose.nose.y-10;
   left_eyeX = results[0].pose.leftEye.x-60;
   left_eyeY = results[0].pose.leftEye.y-100;
  }
@@ -38,7 +38,7 @@ function gotPoses(results){
 
 function draw() {
   image(video,0,0,300,300);
-  image(moustache_nose, noseX, noseX, 70, 30)
+  image(moustache_nose, noseX, noseY, 70, 30)
   image(mario_hat, left_eyeX, left_eyeY, 100, 100)
 }
 
